@@ -44,13 +44,16 @@
   <!-- PROJECTS HERO -->
   <section class="projects-hero">
     <h1 class="display reveal-scale">All<br>Projects</h1>
-    <p class="reveal">A running collection of what I've built — fintech and payment platforms, AI/LLM-powered tools, mobile apps, admin dashboards, and marketplace products. 16 shipped projects and counting.</p>
+    <p class="reveal">A running collection of what I've built — fintech and crypto payment platforms, on-demand delivery apps, AI/LLM-powered tools, agritech dashboards, and marketplace products. 20 shipped projects and counting.</p>
   </section>
 
   <!-- FILTERS -->
   <div class="filters reveal">
     <button class="filter-btn active" data-filter="all">All</button>
+    <button class="filter-btn" data-filter="recent">★ Recent</button>
     <button class="filter-btn" data-filter="fintech">Fintech</button>
+    <button class="filter-btn" data-filter="delivery">Delivery</button>
+    <button class="filter-btn" data-filter="agritech">AgriTech</button>
     <button class="filter-btn" data-filter="ai">AI / ML</button>
     <button class="filter-btn" data-filter="mobile">Mobile</button>
     <button class="filter-btn" data-filter="dashboard">Dashboards</button>
@@ -61,7 +64,90 @@
   <!-- FULL PROJECT GRID -->
   <div class="projects-full-grid">
 
-    <div class="pf-card reveal" id="doronpay" data-category="fintech">
+    <a class="pf-card reveal" id="doronx" data-category="fintech" data-recent="true" href="https://doronx.com/" target="_blank" rel="noopener">
+      <img src="https://images.unsplash.com/photo-1621761191319-c6fb62004040?w=600&h=400&fit=crop" alt="DoronX">
+      <div class="pf-body">
+        <div class="pf-top">
+          <h3>DoronX</h3>
+          <div class="pf-badges">
+            <span class="pf-tag" style="background:var(--pink);">Fintech</span>
+            <span class="pf-badge-recent">★ Recent</span>
+          </div>
+        </div>
+        <p class="desc">Non-custodial crypto payment gateway with smart invoicing.</p>
+        <ul>
+          <li>Built a non-custodial crypto payment gateway across TRC20, BEP20, Solana, and BTC networks, invoicing in GHS, USD, NGN, CAD, and EUR.</li>
+          <li>Implemented a merchant rate engine with configurable markup/spread per trade pair and full rate snapshots on every transaction.</li>
+          <li>Built real-time merchant webhooks for payment detection (seen, confirming, paid, underpaid, overpaid) with idempotent, duplicate-safe callbacks.</li>
+          <li>Designed hosted payment pages & QR stands with live countdown and real-time status tracking.</li>
+        </ul>
+        <div class="pf-stack"><span>Next.js</span><span>Webhooks</span><span>Non-Custodial Wallets</span><span>Multi-Chain APIs</span></div>
+        <div class="pf-live-link"><span class="dot"></span> doronx.com — view live →</div>
+      </div>
+    </a>
+
+    <div class="pf-card reveal" id="voltgo" data-category="delivery" data-recent="true">
+      <img src="https://images.unsplash.com/photo-1601584115197-04ecc0da31d7?w=600&h=400&fit=crop" alt="VoltGo">
+      <div class="pf-body">
+        <div class="pf-top">
+          <h3>VoltGo</h3>
+          <div class="pf-badges">
+            <span class="pf-tag" style="background:var(--yellow);">Delivery</span>
+            <span class="pf-badge-recent">★ Recent</span>
+          </div>
+        </div>
+        <p class="desc">Customer-facing on-demand delivery app.</p>
+        <ul>
+          <li>Built a customer delivery app enabling pickup-to-drop-off booking in under 3 minutes.</li>
+          <li>Implemented push notifications on order assignment and live tracking with rider position updates every 5 seconds.</li>
+          <li>Integrated Mobile Money bundle purchases completing in under 10 seconds, with automatic credit deduction per delivery.</li>
+        </ul>
+        <div class="pf-stack"><span>React Native</span><span>Live Tracking</span><span>Push Notifications</span><span>Mobile Money</span></div>
+      </div>
+    </div>
+
+    <div class="pf-card reveal" id="voltgo-rider" data-category="delivery" data-recent="true">
+      <img src="https://images.unsplash.com/photo-1592805144716-feeccccef5ac?w=600&h=400&fit=crop" alt="VoltGo Rider">
+      <div class="pf-body">
+        <div class="pf-top">
+          <h3>VoltGo Rider</h3>
+          <div class="pf-badges">
+            <span class="pf-tag" style="background:var(--yellow);">Delivery</span>
+            <span class="pf-badge-recent">★ Recent</span>
+          </div>
+        </div>
+        <p class="desc">Rider-facing app for VoltGo's delivery network.</p>
+        <ul>
+          <li>Built the rider app for order notifications, turn-by-turn navigation, and proof-of-delivery photo uploads on 3G.</li>
+          <li>Implemented real-time earnings tracking and an SOS safety alert reaching the admin panel within 15 seconds.</li>
+          <li>Contributed to AI-powered route optimization and ETA prediction for faster, more reliable deliveries.</li>
+        </ul>
+        <div class="pf-stack"><span>React Native</span><span>Navigation</span><span>Real-Time Earnings</span><span>AI Routing</span></div>
+      </div>
+    </div>
+
+    <div class="pf-card reveal" id="mariseth" data-category="agritech" data-recent="true">
+      <img src="https://images.unsplash.com/photo-1500937386664-56d1dfef3854?w=600&h=400&fit=crop" alt="Mariseth Farms">
+      <div class="pf-body">
+        <div class="pf-top">
+          <h3>Mariseth Farms</h3>
+          <div class="pf-badges">
+            <span class="pf-tag" style="background:var(--green);">AgriTech</span>
+            <span class="pf-badge-recent">★ Recent</span>
+          </div>
+        </div>
+        <p class="desc">Agricultural management platform for agribusinesses.</p>
+        <ul>
+          <li>Built a farm management dashboard covering operations, supply chain, finance, HR, and real-time monitoring.</li>
+          <li>Implemented live farm monitoring (weather, crop health, pest & disease, soil health) with interactive Leaflet maps and geo-fencing.</li>
+          <li>Built finance & accounting tools (expenses, invoicing, waybills) with a real-time financial analytics dashboard.</li>
+          <li>Designed credit management/approval workflows and role-based access control with full audit trails.</li>
+        </ul>
+        <div class="pf-stack"><span>Next.js 15</span><span>TypeScript</span><span>React Query</span><span>Leaflet</span><span>WebSocket</span></div>
+      </div>
+    </div>
+
+    <a class="pf-card reveal" id="doronpay" data-category="fintech" href="https://doronpay.com/#/app/bitcoin" target="_blank" rel="noopener">
       <img src="https://images.unsplash.com/photo-1563013544-824ae1b704d3?w=600&h=400&fit=crop" alt="DoronPay Web">
       <div class="pf-body">
         <div class="pf-top">
@@ -75,8 +161,9 @@
           <li>Integrated the DoronPay payment gateway.</li>
         </ul>
         <div class="pf-stack"><span>React / Next.js</span><span>Payment Gateway</span><span>REST APIs</span></div>
+        <div class="pf-live-link"><span class="dot"></span> doronpay.com — view live →</div>
       </div>
-    </div>
+    </a>
 
     <div class="pf-card reveal" data-category="fintech">
       <img src="https://images.unsplash.com/photo-1621504450181-5d356f61d307?w=600&h=400&fit=crop" alt="DoronPay App">
@@ -95,7 +182,7 @@
       </div>
     </div>
 
-    <div class="pf-card reveal" data-category="fintech">
+    <a class="pf-card reveal" data-category="fintech" href="https://susu.thedonkomi.com/login" target="_blank" rel="noopener">
       <img src="https://images.unsplash.com/photo-1579621970795-87facc2f976d?w=600&h=400&fit=crop" alt="Susu Management App">
       <div class="pf-body">
         <div class="pf-top">
@@ -109,8 +196,9 @@
           <li>Designed secure transaction flows and role-based access for admins, collectors, and participants.</li>
         </ul>
         <div class="pf-stack"><span>Web Platform</span><span>RBAC</span><span>Transaction Flows</span></div>
+        <div class="pf-live-link"><span class="dot"></span> susu.thedonkomi.com — view live →</div>
       </div>
-    </div>
+    </a>
 
     <div class="pf-card reveal" id="ai-learning" data-category="ai">
       <img src="https://images.unsplash.com/photo-1677442136019-21780ecad995?w=600&h=400&fit=crop" alt="AI-Powered Learning Platform">
@@ -178,7 +266,7 @@
       </div>
     </div>
 
-    <div class="pf-card reveal" id="trofice" data-category="transport">
+    <a class="pf-card reveal" id="trofice" data-category="transport" href="https://web.trofice.com/auth/login?returnUrl=%2Fmain" target="_blank" rel="noopener">
       <img src="https://images.unsplash.com/photo-1449965408869-eaa3f722e40d?w=600&h=400&fit=crop" alt="Trofice Web">
       <div class="pf-body">
         <div class="pf-top">
@@ -191,10 +279,11 @@
           <li>Handled transactions, inter/intra-city transport services, and special bookings.</li>
         </ul>
         <div class="pf-stack"><span>Web Platform</span><span>Geolocation</span><span>Transaction Security</span></div>
+        <div class="pf-live-link"><span class="dot"></span> web.trofice.com — view live →</div>
       </div>
-    </div>
+    </a>
 
-    <div class="pf-card reveal" data-category="transport">
+    <a class="pf-card reveal" data-category="transport" href="https://apps.apple.com/gh/app/trofice/id6738778985" target="_blank" rel="noopener">
       <img src="https://images.unsplash.com/photo-1449824913935-59a10b8d2000?w=600&h=400&fit=crop" alt="Trofice App">
       <div class="pf-body">
         <div class="pf-top">
@@ -207,15 +296,19 @@
           <li>Handled transactions, inter/intra-city transport services, and special bookings.</li>
         </ul>
         <div class="pf-stack"><span>React Native</span><span>Geolocation</span><span>Booking Workflows</span></div>
+        <div class="pf-live-link"><span class="dot"></span> App Store — view live →</div>
       </div>
-    </div>
+    </a>
 
-    <div class="pf-card reveal" data-category="dashboard">
+    <a class="pf-card reveal" data-category="dashboard" data-recent="true" href="https://churchmann.org/" target="_blank" rel="noopener">
       <img src="https://images.unsplash.com/photo-1560472354-b33ff0c44a43?w=600&h=400&fit=crop" alt="Churchman">
       <div class="pf-body">
         <div class="pf-top">
           <h3>Churchman</h3>
-          <span class="pf-tag" style="background:var(--cyan);">Web Platform</span>
+          <div class="pf-badges">
+            <span class="pf-tag" style="background:var(--cyan);">Web Platform</span>
+            <span class="pf-badge-recent">★ Recent</span>
+          </div>
         </div>
         <p class="desc">Church management system for members, attendance & events.</p>
         <ul>
@@ -223,8 +316,9 @@
           <li>Implemented role-based access for admins and staff with reporting and communication features.</li>
         </ul>
         <div class="pf-stack"><span>Web Platform</span><span>RBAC</span><span>Reporting</span></div>
+        <div class="pf-live-link"><span class="dot"></span> churchmann.org — view live →</div>
       </div>
-    </div>
+    </a>
 
     <div class="pf-card reveal" data-category="dashboard">
       <img src="https://images.unsplash.com/photo-1556740738-b6a63e27c4df?w=600&h=400&fit=crop" alt="DoronERP Dashboard">
@@ -258,7 +352,7 @@
       </div>
     </div>
 
-    <div class="pf-card reveal" data-category="dashboard">
+    <a class="pf-card reveal" data-category="dashboard" href="https://odkgh.com/auth/login?returnUrl=%2Fdashboard" target="_blank" rel="noopener">
       <img src="https://images.unsplash.com/photo-1509440159596-0249088772ff?w=600&h=400&fit=crop" alt="ODKBREAD">
       <div class="pf-body">
         <div class="pf-top">
@@ -271,15 +365,19 @@
           <li>Tracked inventory, sales, and user activities.</li>
         </ul>
         <div class="pf-stack"><span>Inventory Management</span><span>RBAC</span><span>Sales Tracking</span></div>
+        <div class="pf-live-link"><span class="dot"></span> odkgh.com — view live →</div>
       </div>
-    </div>
+    </a>
 
-    <div class="pf-card reveal" data-category="marketplace">
+    <a class="pf-card reveal" data-category="marketplace" data-recent="true" href="https://thedonkomi.com/" target="_blank" rel="noopener">
       <img src="https://images.unsplash.com/photo-1472851294608-062f824d29cc?w=600&h=400&fit=crop" alt="Donkomi">
       <div class="pf-body">
         <div class="pf-top">
           <h3>Donkomi</h3>
-          <span class="pf-tag" style="background:var(--green);">Marketplace</span>
+          <div class="pf-badges">
+            <span class="pf-tag" style="background:var(--green);">Marketplace</span>
+            <span class="pf-badge-recent">★ Recent</span>
+          </div>
         </div>
         <p class="desc">Campus-focused e-commerce system for student vendors.</p>
         <ul>
@@ -287,8 +385,9 @@
           <li>Enabled product listings, order management, and seamless user interaction within university communities.</li>
         </ul>
         <div class="pf-stack"><span>E-commerce</span><span>Order Management</span></div>
+        <div class="pf-live-link"><span class="dot"></span> thedonkomi.com — view live →</div>
       </div>
-    </div>
+    </a>
 
     <div class="pf-card reveal" data-category="marketplace">
       <img src="https://images.unsplash.com/photo-1560448204-e02f11c3d0e2?w=600&h=400&fit=crop" alt="16th August85 Villa">
@@ -306,12 +405,15 @@
       </div>
     </div>
 
-    <div class="pf-card reveal" data-category="marketplace">
+    <div class="pf-card reveal" id="bigluxx" data-category="marketplace" data-recent="true">
       <img src="https://images.unsplash.com/photo-1487412947147-5cebf100ffc2?w=600&h=400&fit=crop" alt="BigLuxx">
       <div class="pf-body">
         <div class="pf-top">
           <h3>BigLuxx</h3>
-          <span class="pf-tag" style="background:var(--green);">Marketplace</span>
+          <div class="pf-badges">
+            <span class="pf-tag" style="background:var(--green);">Marketplace</span>
+            <span class="pf-badge-recent">★ Recent</span>
+          </div>
         </div>
         <p class="desc">Beauty & wellness service marketplace, mobile & web.</p>
         <ul>

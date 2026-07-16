@@ -101,14 +101,20 @@ const TERM_COMMANDS = {
     'Type "open certificate" to view the certificate PDF.'
   ],
   projects: () => [
-    'Fintech: DoronPay Web, DoronPay App, Susu Management App',
+    '★ Recent: DoronX, VoltGo, VoltGo Rider, Mariseth Farms, Churchman,',
+    '  Donkomi, BigLuxx',
+    '',
+    'Fintech: DoronX, DoronPay Web, DoronPay App, Susu Management App',
+    'Delivery: VoltGo, VoltGo Rider',
+    'AgriTech: Mariseth Farms',
     'AI / ML: AI-Powered Learning Platform, Disease Prediction Web App',
     'Mobile: GHartisans App, GHcustomers App',
     'Transport: Trofice Web, Trofice App (PaaS)',
     'Dashboards: Churchman, DoronERP, AWELLAMGH, ODKBREAD',
     'Marketplace: Donkomi, 16th August85 Villa, BigLuxx',
     '',
-    '16 projects total. Type "open projects" to view the full grid.'
+    '20 projects total. Type "open projects" for the full grid,',
+    'filterable by category — or "★ Recent" for current work.'
   ],
   blog: () => [
     'Dev Notes — live tech & software engineering articles, pulled from',
@@ -248,7 +254,10 @@ document.addEventListener('DOMContentLoaded', () => {
       btn.classList.add('active');
       const f = btn.dataset.filter;
       cards.forEach(card => {
-        const show = f === 'all' || card.dataset.category === f;
+        let show;
+        if (f === 'all') show = true;
+        else if (f === 'recent') show = card.dataset.recent === 'true';
+        else show = card.dataset.category === f;
         card.style.display = show ? '' : 'none';
       });
     });
