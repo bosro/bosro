@@ -31,6 +31,7 @@ if (hamburger && mobileMenu) {
 const CONTACT = {
   email: 'misterbosro@gmail.com',
   phone: '+233 593 706 706',
+  whatsapp: '233593706706',
   github: 'github.com/bosro',
   linkedin: 'linkedin.com/in/bernard-bosro-5bab6a24a'
 };
@@ -46,7 +47,7 @@ const TERM_COMMANDS = {
     '  certifications show certifications',
     '  blog           about the dev notes page',
     '  contact        get contact details',
-    '  open <site>    open github / linkedin / email / projects / blog',
+    '  open <site>    open github / linkedin / email / whatsapp / projects / blog',
     '  clear          clear the terminal',
     '  exit           close the terminal'
   ],
@@ -125,8 +126,11 @@ const TERM_COMMANDS = {
   contact: () => [
     `Email:    ${CONTACT.email}`,
     `Phone:    ${CONTACT.phone}`,
+    `WhatsApp: wa.me/${CONTACT.whatsapp}`,
     `GitHub:   ${CONTACT.github}`,
-    `LinkedIn: ${CONTACT.linkedin}`
+    `LinkedIn: ${CONTACT.linkedin}`,
+    '',
+    'Type "open whatsapp" to start a chat.'
   ]
 };
 
@@ -189,11 +193,14 @@ function initTerminal() {
       } else if (target.includes('blog')) {
         printLine('Opening blog ...', 'accent');
         setTimeout(() => { window.location.href = 'blog.html'; }, 400);
+      } else if (target.includes('whatsapp') || target.includes('wa.me')) {
+        printLine(`Opening WhatsApp chat with +${CONTACT.whatsapp} ...`, 'accent');
+        window.open(`https://wa.me/${CONTACT.whatsapp}`, '_blank');
       } else if (target.includes('cert')) {
         printLine('Opening Aspire Leaders Program certificate ...', 'accent');
         window.open('aspire-certificate.pdf', '_blank');
       } else {
-        printLine(`Nothing to open for "${target}". Try: open github / linkedin / email / projects / blog / certificate`, 'warn');
+        printLine(`Nothing to open for "${target}". Try: open github / linkedin / email / whatsapp / projects / blog / certificate`, 'warn');
       }
       return;
     }
