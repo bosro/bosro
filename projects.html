@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Projects — Bernard Bosro</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- NAV -->
+  <header>
+    <nav>
+      <a href="index.html" class="logo">
+        <div class="logo-box">BB</div>
+        BERNARD<br>BOSRO
+      </a>
+      <div class="nav-links">
+        <a href="index.html#about">About</a>
+        <a href="index.html#skills">Skills</a>
+        <a href="index.html#experience">Experience</a>
+        <a href="projects.html">Projects</a>
+        <a href="blog.html">Blog</a>
+        <a href="index.html#contact">Contact</a>
+      </div>
+      <div class="nav-right">
+        <button class="term-toggle" id="terminalToggle" title="Open terminal (press `)">&gt;_</button>
+        <a href="mailto:misterbosro@gmail.com" class="btn btn-yellow">Hire Me</a>
+        <button class="hamburger" id="hamburger"><span></span><span></span><span></span></button>
+      </div>
+    </nav>
+  </header>
+
+  <div class="mobile-menu" id="mobileMenu">
+    <a href="index.html#about">About</a>
+    <a href="index.html#skills">Skills</a>
+    <a href="index.html#experience">Experience</a>
+    <a href="projects.html">Projects</a>
+    <a href="blog.html">Blog</a>
+    <a href="index.html#contact">Contact</a>
+    <a href="mailto:misterbosro@gmail.com" class="btn btn-yellow" style="text-align:center; margin-top:10px;">Hire Me</a>
+  </div>
+
+  <!-- PROJECTS HERO -->
+  <section class="projects-hero">
+    <h1 class="display reveal-scale">All<br>Projects</h1>
+    <p class="reveal">A running collection of what I've built — fintech platforms, ML applications, mobile apps, and security-minded engineering work. More projects are added here as I ship them.</p>
+  </section>
+
+  <!-- FILTERS -->
+  <div class="filters reveal">
+    <button class="filter-btn active" data-filter="all">All</button>
+    <button class="filter-btn" data-filter="fintech">Fintech</button>
+    <button class="filter-btn" data-filter="ml">ML / AI</button>
+    <button class="filter-btn" data-filter="mobile">Mobile</button>
+    <button class="filter-btn" data-filter="transport">Transport</button>
+  </div>
+
+  <!-- FULL PROJECT GRID -->
+  <div class="projects-full-grid">
+
+    <div class="pf-card reveal" id="doronpay" data-category="fintech">
+      <img src="https://images.unsplash.com/photo-1563013544-824ae1b704d3?w=600&h=400&fit=crop" alt="DoronPay">
+      <div class="pf-body">
+        <div class="pf-top">
+          <h3>DoronPay</h3>
+          <span class="pf-tag" style="background:var(--pink);">Fintech</span>
+        </div>
+        <p class="desc">Fintech payment platform supporting cryptocurrency and fiat transactions.</p>
+        <ul>
+          <li>Developed user-facing features for a digital payments platform supporting cryptocurrency and fiat transactions.</li>
+          <li>Integrated secure payment APIs with robust authentication and authorization workflows to protect financial transactions.</li>
+          <li>Collaborated with backend engineers to implement transaction flows, ensuring data integrity and reliability.</li>
+          <li>Applied input validation and error-handling patterns consistent with secure fintech development standards.</li>
+        </ul>
+        <div class="pf-stack"><span>Python</span><span>JavaScript</span><span>REST APIs</span><span>JWT</span><span>Payment Gateways</span></div>
+      </div>
+    </div>
+
+    <div class="pf-card reveal" id="disease-prediction" data-category="ml">
+      <img src="https://images.unsplash.com/photo-1526374965328-7f61d4dc18c5?w=600&h=400&fit=crop" alt="Disease Prediction System">
+      <div class="pf-body">
+        <div class="pf-top">
+          <h3>Disease Prediction System</h3>
+          <span class="pf-tag" style="background:var(--cyan);">ML Security</span>
+        </div>
+        <p class="desc">Machine learning web application for disease prediction with access-controlled health data.</p>
+        <ul>
+          <li>Built a machine learning web application for disease prediction using Python and Scikit-learn.</li>
+          <li>Implemented role-based access control to restrict sensitive health data to authorised users only.</li>
+          <li>Designed a clean data pipeline with input validation and structured reporting, applying data protection principles.</li>
+        </ul>
+        <div class="pf-stack"><span>Python</span><span>Scikit-learn</span><span>Streamlit</span><span>RBAC</span></div>
+      </div>
+    </div>
+
+    <div class="pf-card reveal" id="ghartisans" data-category="mobile">
+      <img src="https://images.unsplash.com/photo-1512941937669-90a1b58e7e9c?w=600&h=400&fit=crop" alt="GHArtisans">
+      <div class="pf-body">
+        <div class="pf-top">
+          <h3>GHArtisans</h3>
+          <span class="pf-tag" style="background:var(--green);">Mobile</span>
+        </div>
+        <p class="desc">Mobile commerce platform with authenticated, real-time user experiences.</p>
+        <ul>
+          <li>Built mobile application features including Firebase Authentication, push notifications, and real-time communication.</li>
+          <li>Implemented secure user session management and protected API endpoints from unauthorised access.</li>
+          <li>Deployed a production mobile app with a focus on reliability, authentication flows, and secure data handling.</li>
+        </ul>
+        <div class="pf-stack"><span>React Native</span><span>Firebase</span><span>Push Notifications</span><span>Auth</span></div>
+      </div>
+    </div>
+
+    <div class="pf-card reveal" id="ai-learning" data-category="ml">
+      <img src="https://images.unsplash.com/photo-1677442136019-21780ecad995?w=600&h=400&fit=crop" alt="AI Learning Platform">
+      <div class="pf-body">
+        <div class="pf-top">
+          <h3>AI Learning Platform</h3>
+          <span class="pf-tag" style="background:var(--purple);">AI / LLM</span>
+        </div>
+        <p class="desc">Intelligent tutoring system built on secure LLM API integration.</p>
+        <ul>
+          <li>Integrated large language model capabilities via secure API interactions to deliver adaptive learning experiences.</li>
+          <li>Applied API key management, rate limiting awareness, and prompt injection mitigation best practices.</li>
+          <li>Built an intelligent tutoring interface with structured access controls and role-based content delivery.</li>
+        </ul>
+        <div class="pf-stack"><span>LLM Integration</span><span>Secure API Design</span><span>Prompt Engineering</span></div>
+      </div>
+    </div>
+
+    <div class="pf-card reveal" id="trofice" data-category="transport">
+      <img src="https://images.unsplash.com/photo-1449965408869-eaa3f722e40d?w=600&h=400&fit=crop" alt="Trofice">
+      <div class="pf-body">
+        <div class="pf-top">
+          <h3>Trofice</h3>
+          <span class="pf-tag" style="background:var(--yellow);">Transport</span>
+        </div>
+        <p class="desc">Transport and booking platform with geolocation and transaction security.</p>
+        <ul>
+          <li>Contributed to a transport platform with geolocation tracking, ride booking, and transaction processing features.</li>
+          <li>Implemented secure session handling and validated user inputs throughout booking and payment workflows.</li>
+        </ul>
+        <div class="pf-stack"><span>Geolocation APIs</span><span>Booking Workflows</span><span>Transaction Security</span></div>
+      </div>
+    </div>
+
+    <div class="more-card reveal">
+      <span class="plus">+</span>
+      <div style="font-weight:700; color:var(--white); font-size:15px;">More projects on the way</div>
+      <div style="font-size:13px;">This grid grows as new work ships — check back soon or reach out to see what I'm currently building.</div>
+      <a href="mailto:misterbosro@gmail.com" class="btn btn-outline" style="margin-top:6px;">Get In Touch →</a>
+    </div>
+
+  </div>
+
+  <!-- FOOTER -->
+  <footer id="contact">
+    <div>
+      <div class="logo-box" style="margin-bottom:16px;">BB</div>
+      <p style="font-size:12px; color:var(--gray); max-width:200px;">Bernard Bosro — Software Engineer, Application Security.</p>
+    </div>
+    <div>
+      <h4>Focus</h4>
+      <ul>
+        <li>Application Security</li>
+        <li>Secure API Design</li>
+      </ul>
+    </div>
+    <div>
+      <h4>About</h4>
+      <ul>
+        <li><a href="index.html#experience">Experience</a></li>
+        <li><a href="projects.html">Projects</a></li>
+        <li><a href="blog.html">Blog</a></li>
+      </ul>
+    </div>
+    <div>
+      <h4>Contact</h4>
+      <ul>
+        <li>Accra, Ghana</li>
+        <li><a href="mailto:misterbosro@gmail.com">misterbosro@gmail.com</a></li>
+        <li><a href="tel:+233593706706">+233 593 706 706</a></li>
+      </ul>
+    </div>
+    <div>
+      <a href="mailto:misterbosro@gmail.com" class="btn btn-yellow" style="text-align:center;">Hire Me →</a>
+    </div>
+  </footer>
+  <div class="footer-bottom">
+    <span>© 2025 Bernard Bosro. All rights reserved.</span>
+    <span><a href="https://github.com/bosro" target="_blank" rel="noopener">github.com/bosro</a> · <a href="https://linkedin.com/in/bernard-bosro-5bab6a24a" target="_blank" rel="noopener">linkedin.com/in/bernard-bosro</a></span>
+  </div>
+
+  <!-- TERMINAL OVERLAY -->
+  <div class="terminal-overlay" id="terminalOverlay">
+    <div class="terminal-window">
+      <div class="term-titlebar">
+        <div class="term-dots"><span></span><span></span><span></span></div>
+        <div class="term-title">bernard@bosro — zsh</div>
+        <button class="term-close" id="termClose">✕</button>
+      </div>
+      <div class="term-body" id="termBody"></div>
+      <div class="term-input-row" style="padding: 0 20px 14px;">
+        <span class="prompt">bernard@bosro:~$</span>
+        <input type="text" id="termInput" autocomplete="off" spellcheck="false" placeholder="type 'help' to get started">
+      </div>
+      <div class="term-hint">Try: about · skills · experience · projects · contact · open github · clear</div>
+    </div>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>
