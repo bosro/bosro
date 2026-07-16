@@ -38,34 +38,44 @@ const CONTACT = {
 const TERM_COMMANDS = {
   help: () => [
     'Available commands:',
-    '  about        show a short bio',
-    '  skills       list technical skills',
-    '  experience   show work history',
-    '  projects     list projects',
-    '  education    show education background',
-    '  blog         about the dev notes page',
-    '  contact      get contact details',
-    '  open <site>  open github / linkedin / email / projects / blog',
-    '  clear        clear the terminal',
-    '  exit         close the terminal'
+    '  about          show a short bio',
+    '  skills         list technical skills',
+    '  experience     show work history',
+    '  projects       list projects',
+    '  education      show education background',
+    '  certifications show certifications',
+    '  blog           about the dev notes page',
+    '  contact        get contact details',
+    '  open <site>    open github / linkedin / email / projects / blog',
+    '  clear          clear the terminal',
+    '  exit           close the terminal'
   ],
   whoami: () => ['bernard@bosro — Software Engineer / Aspiring Application Security Engineer'],
   about: () => [
-    'Bernard Bosro — Software Engineer, Accra, Ghana.',
-    '3+ years building production fintech, transport, and AI apps.',
-    'Currently transitioning into Application Security Engineering,',
-    'combining a software development foundation with self-directed',
-    'study in threat modelling and the OWASP Top 10.',
-    'Targeting Mollie\'s 2026 Security Graduate Program.'
+    'Bernard Bosro — Software Developer, Accra, Ghana.',
+    '3+ years building production web & mobile apps across fintech,',
+    'transport, e-commerce, and AI. Core stack: Angular, React, React',
+    'Native, Next.js, Node.js, Firebase, MongoDB, PostgreSQL.',
+    'Also integrates AI/LLM features (chat interfaces, adaptive learning,',
+    'automation) using prompt engineering — and is now folding in',
+    'Application Security Engineering study (OWASP Top 10, threat',
+    'modelling) targeting Mollie\'s 2026 Security Graduate Program.',
+    'Portfolio: bosro.github.io/portfolio'
   ],
   skills: () => [
-    'Security (Applied): JWT, OAuth Fundamentals, RBAC, HTTPS/TLS,',
-    '  Input Validation, Secure API Design, OWASP Top 10, AuthN/AuthZ',
-    'Languages: Python, JavaScript, TypeScript, SQL',
-    'Frontend & Mobile: React, React Native, Angular, Next.js',
-    'Backend: Node.js, Express',
-    'Databases: MongoDB, PostgreSQL, Firebase, MySQL',
-    'Tools: Git, Postman, Redux Toolkit, TanStack Query, Figma, Docker'
+    'Frameworks: HTML5, CSS3, TypeScript, JavaScript, Angular, React.js,',
+    '  React Native, Next.js, Node.js, Express, Python',
+    'AI & LLM: OpenAI/Gemini integration, prompt engineering, chat UIs,',
+    '  context handling, token optimization, response streaming',
+    'Security (Applied): JWT, Firebase Auth, RBAC, HTTPS/TLS,',
+    '  Input Validation, OWASP Top 10, Secure API Design',
+    'State & Data: Redux Toolkit, TanStack Query, Zustand, Context API,',
+    '  Axios, WebSocket, GraphQL (basic)',
+    'Backend & Cloud: Firebase Firestore/FCM, MongoDB (Mongoose),',
+    '  PostgreSQL (Prisma), Google Cloud Console, Cloudflare R2',
+    'Payments/Maps/ML: Payment Gateways, Paystack, Google Maps API,',
+    '  Geolocation, Scikit-learn, Pandas, Streamlit',
+    'Tools: Git, GitHub, Postman, Figma, Canva, VS Code'
   ],
   experience: () => [
     'Software Engineer — Lazylogic Limited (2023–2025), Accra, Ghana',
@@ -77,20 +87,28 @@ const TERM_COMMANDS = {
   ],
   education: () => [
     'Accra Technical University',
-    '  BTech, Computer Science — Expected 2026',
-    '  HND, Computer Science — 2025',
-    'Coursework: Data Structures & Algorithms, Software Engineering,',
-    '  Database Systems, Computer Networks, OS, Machine Learning,',
-    '  Information Security.'
+    '  BTech, Computer Science — 10/2025 – 09/2026',
+    '  HND, Computer Science — 11/2022 – 09/2025',
+    'Final Year Project: Disease Prediction Prototype',
+    '  Tools: Python, Streamlit, Scikit-learn, Visual Basic, Google Colab'
+  ],
+  certifications: () => [
+    '2026 Aspire Leaders Program — Aspire Institute',
+    '  Completed all modules · 40 hours of coursework · Issued July 2026',
+    '  Focus: self-confidence, critical thinking, communication, and',
+    '  positive social impact within a global community.',
+    '',
+    'Type "open certificate" to view the certificate PDF.'
   ],
   projects: () => [
-    '01. DoronPay — fintech payment platform (Python, JWT, Payment APIs)',
-    '02. Disease Prediction System — ML app w/ RBAC (Python, Scikit-learn)',
-    '03. GHArtisans — mobile commerce (React Native, Firebase Auth)',
-    '04. AI Learning Platform — LLM tutoring (Secure API Design)',
-    '05. Trofice — transport & booking (Geolocation, Transaction Security)',
+    'Fintech: DoronPay Web, DoronPay App, Susu Management App',
+    'AI / ML: AI-Powered Learning Platform, Disease Prediction Web App',
+    'Mobile: GHartisans App, GHcustomers App',
+    'Transport: Trofice Web, Trofice App (PaaS)',
+    'Dashboards: Churchman, DoronERP, AWELLAMGH, ODKBREAD',
+    'Marketplace: Donkomi, 16th August85 Villa, BigLuxx',
     '',
-    'Type "open projects" to view the full projects page.'
+    '16 projects total. Type "open projects" to view the full grid.'
   ],
   blog: () => [
     'Dev Notes — live tech & software engineering articles, pulled from',
@@ -165,8 +183,11 @@ function initTerminal() {
       } else if (target.includes('blog')) {
         printLine('Opening blog ...', 'accent');
         setTimeout(() => { window.location.href = 'blog.html'; }, 400);
+      } else if (target.includes('cert')) {
+        printLine('Opening Aspire Leaders Program certificate ...', 'accent');
+        window.open('aspire-certificate.pdf', '_blank');
       } else {
-        printLine(`Nothing to open for "${target}". Try: open github / linkedin / email / projects / blog`, 'warn');
+        printLine(`Nothing to open for "${target}". Try: open github / linkedin / email / projects / blog / certificate`, 'warn');
       }
       return;
     }

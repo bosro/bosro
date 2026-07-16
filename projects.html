@@ -44,15 +44,17 @@
   <!-- PROJECTS HERO -->
   <section class="projects-hero">
     <h1 class="display reveal-scale">All<br>Projects</h1>
-    <p class="reveal">A running collection of what I've built — fintech platforms, ML applications, mobile apps, and security-minded engineering work. More projects are added here as I ship them.</p>
+    <p class="reveal">A running collection of what I've built — fintech and payment platforms, AI/LLM-powered tools, mobile apps, admin dashboards, and marketplace products. 16 shipped projects and counting.</p>
   </section>
 
   <!-- FILTERS -->
   <div class="filters reveal">
     <button class="filter-btn active" data-filter="all">All</button>
     <button class="filter-btn" data-filter="fintech">Fintech</button>
-    <button class="filter-btn" data-filter="ml">ML / AI</button>
+    <button class="filter-btn" data-filter="ai">AI / ML</button>
     <button class="filter-btn" data-filter="mobile">Mobile</button>
+    <button class="filter-btn" data-filter="dashboard">Dashboards</button>
+    <button class="filter-btn" data-filter="marketplace">Marketplace</button>
     <button class="filter-btn" data-filter="transport">Transport</button>
   </div>
 
@@ -60,87 +62,264 @@
   <div class="projects-full-grid">
 
     <div class="pf-card reveal" id="doronpay" data-category="fintech">
-      <img src="https://images.unsplash.com/photo-1563013544-824ae1b704d3?w=600&h=400&fit=crop" alt="DoronPay">
+      <img src="https://images.unsplash.com/photo-1563013544-824ae1b704d3?w=600&h=400&fit=crop" alt="DoronPay Web">
       <div class="pf-body">
         <div class="pf-top">
-          <h3>DoronPay</h3>
+          <h3>DoronPay Web</h3>
           <span class="pf-tag" style="background:var(--pink);">Fintech</span>
         </div>
-        <p class="desc">Fintech payment platform supporting cryptocurrency and fiat transactions.</p>
+        <p class="desc">Crypto / digital payment platform — web interface.</p>
         <ul>
-          <li>Developed user-facing features for a digital payments platform supporting cryptocurrency and fiat transactions.</li>
-          <li>Integrated secure payment APIs with robust authentication and authorization workflows to protect financial transactions.</li>
-          <li>Collaborated with backend engineers to implement transaction flows, ensuring data integrity and reliability.</li>
-          <li>Applied input validation and error-handling patterns consistent with secure fintech development standards.</li>
+          <li>Contributed to developing a crypto–fiat payment platform.</li>
+          <li>Developed the application interface end-to-end.</li>
+          <li>Integrated the DoronPay payment gateway.</li>
         </ul>
-        <div class="pf-stack"><span>Python</span><span>JavaScript</span><span>REST APIs</span><span>JWT</span><span>Payment Gateways</span></div>
+        <div class="pf-stack"><span>React / Next.js</span><span>Payment Gateway</span><span>REST APIs</span></div>
       </div>
     </div>
 
-    <div class="pf-card reveal" id="disease-prediction" data-category="ml">
-      <img src="https://images.unsplash.com/photo-1526374965328-7f61d4dc18c5?w=600&h=400&fit=crop" alt="Disease Prediction System">
+    <div class="pf-card reveal" data-category="fintech">
+      <img src="https://images.unsplash.com/photo-1621504450181-5d356f61d307?w=600&h=400&fit=crop" alt="DoronPay App">
       <div class="pf-body">
         <div class="pf-top">
-          <h3>Disease Prediction System</h3>
-          <span class="pf-tag" style="background:var(--cyan);">ML Security</span>
+          <h3>DoronPay App</h3>
+          <span class="pf-tag" style="background:var(--pink);">Fintech</span>
         </div>
-        <p class="desc">Machine learning web application for disease prediction with access-controlled health data.</p>
+        <p class="desc">Crypto / digital payments — mobile application.</p>
         <ul>
-          <li>Built a machine learning web application for disease prediction using Python and Scikit-learn.</li>
-          <li>Implemented role-based access control to restrict sensitive health data to authorised users only.</li>
-          <li>Designed a clean data pipeline with input validation and structured reporting, applying data protection principles.</li>
+          <li>Contributed to developing a crypto–fiat mobile platform.</li>
+          <li>Developed the application interface for mobile.</li>
+          <li>Integrated the DoronPay payment gateway.</li>
         </ul>
-        <div class="pf-stack"><span>Python</span><span>Scikit-learn</span><span>Streamlit</span><span>RBAC</span></div>
+        <div class="pf-stack"><span>React Native</span><span>Payment Gateway</span><span>REST APIs</span></div>
+      </div>
+    </div>
+
+    <div class="pf-card reveal" data-category="fintech">
+      <img src="https://images.unsplash.com/photo-1579621970795-87facc2f976d?w=600&h=400&fit=crop" alt="Susu Management App">
+      <div class="pf-body">
+        <div class="pf-top">
+          <h3>Susu Management App</h3>
+          <span class="pf-tag" style="background:var(--pink);">Fintech & Savings</span>
+        </div>
+        <p class="desc">Digital susu platform for group savings, contributions, and payouts.</p>
+        <ul>
+          <li>Enabled users to manage group savings, contributions, and payouts.</li>
+          <li>Implemented contribution tracking, automated schedules, and notifications for transparency.</li>
+          <li>Designed secure transaction flows and role-based access for admins, collectors, and participants.</li>
+        </ul>
+        <div class="pf-stack"><span>Web Platform</span><span>RBAC</span><span>Transaction Flows</span></div>
+      </div>
+    </div>
+
+    <div class="pf-card reveal" id="ai-learning" data-category="ai">
+      <img src="https://images.unsplash.com/photo-1677442136019-21780ecad995?w=600&h=400&fit=crop" alt="AI-Powered Learning Platform">
+      <div class="pf-body">
+        <div class="pf-top">
+          <h3>AI-Powered Learning Platform</h3>
+          <span class="pf-tag" style="background:var(--purple);">AI / LLM</span>
+        </div>
+        <p class="desc">Personalized, AI-driven education and tutoring system.</p>
+        <ul>
+          <li>Built a platform delivering personalized learning experiences for users.</li>
+          <li>Integrated AI/LLM features for content generation, adaptive learning paths, and interactive tutoring.</li>
+          <li>Enabled dynamic question generation, contextual explanations, and smart learner assistance.</li>
+        </ul>
+        <div class="pf-stack"><span>LLM Integration</span><span>Prompt Engineering</span><span>Adaptive Learning</span></div>
+      </div>
+    </div>
+
+    <div class="pf-card reveal" id="disease-prediction" data-category="ai">
+      <img src="https://images.unsplash.com/photo-1526374965328-7f61d4dc18c5?w=600&h=400&fit=crop" alt="Disease Prediction Web App">
+      <div class="pf-body">
+        <div class="pf-top">
+          <h3>Disease Prediction Web App</h3>
+          <span class="pf-tag" style="background:var(--purple);">AI / ML</span>
+        </div>
+        <p class="desc">Final year project — clinic-facing disease prediction tool.</p>
+        <ul>
+          <li>Built a disease prediction tool for clinics, enabling predictions from patient input.</li>
+          <li>Integrated role-based access (Admin/Staff), reporting, and PDF generation.</li>
+          <li>Stack: Streamlit, Python, Scikit-learn, Google Colab.</li>
+        </ul>
+        <div class="pf-stack"><span>Python</span><span>Scikit-learn</span><span>Streamlit</span><span>Google Colab</span></div>
       </div>
     </div>
 
     <div class="pf-card reveal" id="ghartisans" data-category="mobile">
-      <img src="https://images.unsplash.com/photo-1512941937669-90a1b58e7e9c?w=600&h=400&fit=crop" alt="GHArtisans">
+      <img src="https://images.unsplash.com/photo-1512941937669-90a1b58e7e9c?w=600&h=400&fit=crop" alt="GHartisans App">
       <div class="pf-body">
         <div class="pf-top">
-          <h3>GHArtisans</h3>
+          <h3>GHartisans App</h3>
           <span class="pf-tag" style="background:var(--green);">Mobile</span>
         </div>
-        <p class="desc">Mobile commerce platform with authenticated, real-time user experiences.</p>
+        <p class="desc">Artisan service app with chat and real-time job updates.</p>
         <ul>
-          <li>Built mobile application features including Firebase Authentication, push notifications, and real-time communication.</li>
-          <li>Implemented secure user session management and protected API endpoints from unauthorised access.</li>
-          <li>Deployed a production mobile app with a focus on reliability, authentication flows, and secure data handling.</li>
+          <li>Built an artisan service app with chat features, job status updates, and real-time notifications.</li>
+          <li>Implemented custom onboarding and service interaction flows.</li>
         </ul>
-        <div class="pf-stack"><span>React Native</span><span>Firebase</span><span>Push Notifications</span><span>Auth</span></div>
+        <div class="pf-stack"><span>React Native</span><span>Firestore</span><span>Push Notifications</span></div>
       </div>
     </div>
 
-    <div class="pf-card reveal" id="ai-learning" data-category="ml">
-      <img src="https://images.unsplash.com/photo-1677442136019-21780ecad995?w=600&h=400&fit=crop" alt="AI Learning Platform">
+    <div class="pf-card reveal" data-category="mobile">
+      <img src="https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?w=600&h=400&fit=crop" alt="GHcustomers App">
       <div class="pf-body">
         <div class="pf-top">
-          <h3>AI Learning Platform</h3>
-          <span class="pf-tag" style="background:var(--purple);">AI / LLM</span>
+          <h3>GHcustomers App</h3>
+          <span class="pf-tag" style="background:var(--green);">Mobile</span>
         </div>
-        <p class="desc">Intelligent tutoring system built on secure LLM API integration.</p>
+        <p class="desc">Customer-facing booking app for certified artisans.</p>
         <ul>
-          <li>Integrated large language model capabilities via secure API interactions to deliver adaptive learning experiences.</li>
-          <li>Applied API key management, rate limiting awareness, and prompt injection mitigation best practices.</li>
-          <li>Built an intelligent tutoring interface with structured access controls and role-based content delivery.</li>
+          <li>Built the customer-facing booking app for certified artisans.</li>
+          <li>Integrated Firebase Auth, Paystack/Flutterwave payments, and form validation.</li>
         </ul>
-        <div class="pf-stack"><span>LLM Integration</span><span>Secure API Design</span><span>Prompt Engineering</span></div>
+        <div class="pf-stack"><span>React Native</span><span>Firebase</span><span>Paystack / Flutterwave</span></div>
       </div>
     </div>
 
     <div class="pf-card reveal" id="trofice" data-category="transport">
-      <img src="https://images.unsplash.com/photo-1449965408869-eaa3f722e40d?w=600&h=400&fit=crop" alt="Trofice">
+      <img src="https://images.unsplash.com/photo-1449965408869-eaa3f722e40d?w=600&h=400&fit=crop" alt="Trofice Web">
       <div class="pf-body">
         <div class="pf-top">
-          <h3>Trofice</h3>
+          <h3>Trofice Web</h3>
           <span class="pf-tag" style="background:var(--yellow);">Transport</span>
         </div>
-        <p class="desc">Transport and booking platform with geolocation and transaction security.</p>
+        <p class="desc">Transport platform — fleet management, validator tracking, ride booking.</p>
         <ul>
-          <li>Contributed to a transport platform with geolocation tracking, ride booking, and transaction processing features.</li>
-          <li>Implemented secure session handling and validated user inputs throughout booking and payment workflows.</li>
+          <li>Created a transport platform offering fleet management, validator tracking, and ride booking.</li>
+          <li>Handled transactions, inter/intra-city transport services, and special bookings.</li>
         </ul>
-        <div class="pf-stack"><span>Geolocation APIs</span><span>Booking Workflows</span><span>Transaction Security</span></div>
+        <div class="pf-stack"><span>Web Platform</span><span>Geolocation</span><span>Transaction Security</span></div>
+      </div>
+    </div>
+
+    <div class="pf-card reveal" data-category="transport">
+      <img src="https://images.unsplash.com/photo-1449824913935-59a10b8d2000?w=600&h=400&fit=crop" alt="Trofice App">
+      <div class="pf-body">
+        <div class="pf-top">
+          <h3>Trofice App (PaaS)</h3>
+          <span class="pf-tag" style="background:var(--yellow);">Transport</span>
+        </div>
+        <p class="desc">Mobile transport platform-as-a-service.</p>
+        <ul>
+          <li>Created a mobile transport platform offering fleet management, validator tracking, and ride booking.</li>
+          <li>Handled transactions, inter/intra-city transport services, and special bookings.</li>
+        </ul>
+        <div class="pf-stack"><span>React Native</span><span>Geolocation</span><span>Booking Workflows</span></div>
+      </div>
+    </div>
+
+    <div class="pf-card reveal" data-category="dashboard">
+      <img src="https://images.unsplash.com/photo-1560472354-b33ff0c44a43?w=600&h=400&fit=crop" alt="Churchman">
+      <div class="pf-body">
+        <div class="pf-top">
+          <h3>Churchman</h3>
+          <span class="pf-tag" style="background:var(--cyan);">Web Platform</span>
+        </div>
+        <p class="desc">Church management system for members, attendance & events.</p>
+        <ul>
+          <li>Built a centralized platform for managing church operations including members, attendance, and events.</li>
+          <li>Implemented role-based access for admins and staff with reporting and communication features.</li>
+        </ul>
+        <div class="pf-stack"><span>Web Platform</span><span>RBAC</span><span>Reporting</span></div>
+      </div>
+    </div>
+
+    <div class="pf-card reveal" data-category="dashboard">
+      <img src="https://images.unsplash.com/photo-1556740738-b6a63e27c4df?w=600&h=400&fit=crop" alt="DoronERP Dashboard">
+      <div class="pf-body">
+        <div class="pf-top">
+          <h3>DoronERP Dashboard</h3>
+          <span class="pf-tag" style="background:var(--cyan);">Dashboard</span>
+        </div>
+        <p class="desc">Gift card / voucher management system for vendors.</p>
+        <ul>
+          <li>Created a gift card/voucher management system for vendors.</li>
+          <li>Enabled admin controls and a data management dashboard.</li>
+        </ul>
+        <div class="pf-stack"><span>Admin Dashboard</span><span>Voucher Management</span></div>
+      </div>
+    </div>
+
+    <div class="pf-card reveal" data-category="dashboard">
+      <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=600&h=400&fit=crop" alt="AWELLAMGH Dashboard">
+      <div class="pf-body">
+        <div class="pf-top">
+          <h3>AWELLAMGH Dashboard</h3>
+          <span class="pf-tag" style="background:var(--cyan);">Dashboard</span>
+        </div>
+        <p class="desc">Management dashboard with user roles & permissions.</p>
+        <ul>
+          <li>Developed a comprehensive management dashboard with user access controls.</li>
+          <li>Provided analytics and administrative features.</li>
+        </ul>
+        <div class="pf-stack"><span>Admin Dashboard</span><span>User Permissions</span><span>Analytics</span></div>
+      </div>
+    </div>
+
+    <div class="pf-card reveal" data-category="dashboard">
+      <img src="https://images.unsplash.com/photo-1509440159596-0249088772ff?w=600&h=400&fit=crop" alt="ODKBREAD">
+      <div class="pf-body">
+        <div class="pf-top">
+          <h3>ODKBREAD</h3>
+          <span class="pf-tag" style="background:var(--cyan);">Dashboard</span>
+        </div>
+        <p class="desc">Bread company business management system.</p>
+        <ul>
+          <li>Built a business management system with admin/staff permissions.</li>
+          <li>Tracked inventory, sales, and user activities.</li>
+        </ul>
+        <div class="pf-stack"><span>Inventory Management</span><span>RBAC</span><span>Sales Tracking</span></div>
+      </div>
+    </div>
+
+    <div class="pf-card reveal" data-category="marketplace">
+      <img src="https://images.unsplash.com/photo-1472851294608-062f824d29cc?w=600&h=400&fit=crop" alt="Donkomi">
+      <div class="pf-body">
+        <div class="pf-top">
+          <h3>Donkomi</h3>
+          <span class="pf-tag" style="background:var(--green);">Marketplace</span>
+        </div>
+        <p class="desc">Campus-focused e-commerce system for student vendors.</p>
+        <ul>
+          <li>Developed a campus e-commerce platform connecting student vendors and buyers.</li>
+          <li>Enabled product listings, order management, and seamless user interaction within university communities.</li>
+        </ul>
+        <div class="pf-stack"><span>E-commerce</span><span>Order Management</span></div>
+      </div>
+    </div>
+
+    <div class="pf-card reveal" data-category="marketplace">
+      <img src="https://images.unsplash.com/photo-1560448204-e02f11c3d0e2?w=600&h=400&fit=crop" alt="16th August85 Villa">
+      <div class="pf-body">
+        <div class="pf-top">
+          <h3>16th August85 Villa</h3>
+          <span class="pf-tag" style="background:var(--green);">Marketplace</span>
+        </div>
+        <p class="desc">Villa rental platform with mobile-optimized booking.</p>
+        <ul>
+          <li>Built a house rental platform with date pickers.</li>
+          <li>Created an intuitive booking UI optimized for mobile devices.</li>
+        </ul>
+        <div class="pf-stack"><span>Booking UI</span><span>Mobile-First Design</span></div>
+      </div>
+    </div>
+
+    <div class="pf-card reveal" data-category="marketplace">
+      <img src="https://images.unsplash.com/photo-1487412947147-5cebf100ffc2?w=600&h=400&fit=crop" alt="BigLuxx">
+      <div class="pf-body">
+        <div class="pf-top">
+          <h3>BigLuxx</h3>
+          <span class="pf-tag" style="background:var(--green);">Marketplace</span>
+        </div>
+        <p class="desc">Beauty & wellness service marketplace, mobile & web.</p>
+        <ul>
+          <li>Developed a beauty service platform connecting users with beauticians, masseuses, and wellness professionals.</li>
+          <li>Enabled authentication, service discovery, and seamless booking of beauty & wellness services.</li>
+          <li>Designed intuitive mobile and web interfaces to enhance user experience and accessibility.</li>
+        </ul>
+        <div class="pf-stack"><span>Web & Mobile</span><span>Auth</span><span>Service Booking</span></div>
       </div>
     </div>
 
