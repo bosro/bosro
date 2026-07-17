@@ -102,8 +102,8 @@ const TERM_COMMANDS = {
     'Type "open certificate" to view the certificate PDF.'
   ],
   projects: () => [
-    '★ Recent: DoronX, VoltGo, VoltGo Rider, Mariseth Farms, Churchman,',
-    '  Donkomi, BigLuxx',
+    '[Recent] DoronX, VoltGo, VoltGo Rider, Mariseth Farms, Churchman,',
+    '         Donkomi, BigLuxx',
     '',
     'Fintech: DoronX, DoronPay Web, DoronPay App, Susu Management App',
     'Delivery: VoltGo, VoltGo Rider',
@@ -115,7 +115,7 @@ const TERM_COMMANDS = {
     'Marketplace: Donkomi, 16th August85 Villa, BigLuxx',
     '',
     '20 projects total. Type "open projects" for the full grid,',
-    'filterable by category — or "★ Recent" for current work.'
+    'filterable by category — or "[Recent]" for current work.'
   ],
   blog: () => [
     'Dev Notes — live tech & software engineering articles, pulled from',
@@ -213,7 +213,10 @@ function initTerminal() {
 
   function openTerminal() {
     overlay.classList.add('open');
-    setTimeout(() => input.focus(), 200);
+    // Focus must happen synchronously inside the user-gesture handler —
+    // wrapping it in setTimeout breaks the gesture chain on mobile browsers
+    // and the on-screen keyboard never appears.
+    input.focus();
     if (!body.dataset.initialized) {
       printLine('Welcome to bernard@bosro — interactive portfolio terminal.', 'accent');
       printLine('Type "help" to see available commands.');
@@ -222,11 +225,19 @@ function initTerminal() {
   }
   function closeTerminal() {
     overlay.classList.remove('open');
+    input.blur();
   }
 
   toggle.addEventListener('click', openTerminal);
   closeBtn.addEventListener('click', closeTerminal);
   overlay.addEventListener('click', (e) => { if (e.target === overlay) closeTerminal(); });
+  // Tapping anywhere in the terminal window (output area, hint bar, etc.)
+  // re-focuses the input — important on mobile where the keyboard closes
+  // if focus is lost, and there's no cursor to click back into precisely.
+  document.getElementById('terminalWindow')?.addEventListener('click', (e) => {
+    if (e.target.closest('#termClose')) return;
+    input.focus();
+  });
   document.addEventListener('keydown', (e) => {
     if (e.key === 'Escape') closeTerminal();
     if (e.key === '`' && !overlay.classList.contains('open')) { e.preventDefault(); openTerminal(); }
