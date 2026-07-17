@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://bernardbosro.com/sitemap.xml
+Sitemap: https://bosro.tech/sitemap.xml
