@@ -11,6 +11,53 @@ const revealObserver = new IntersectionObserver((entries) => {
 document.querySelectorAll('.reveal, .reveal-scale, .reveal-left, .reveal-right')
   .forEach(el => revealObserver.observe(el));
 
+/* ============ ROTATING WORD HERO ============ */
+function initWordRotator(elId, words, interval){
+  const el = document.getElementById(elId);
+  if (!el) return;
+  let idx = 0;
+  setInterval(() => {
+    idx = (idx + 1) % words.length;
+    el.classList.add('swap');
+    setTimeout(() => {
+      el.textContent = words[idx];
+      el.classList.remove('swap');
+    }, 260);
+  }, interval);
+}
+
+initWordRotator('heroWordRotate', ['Secure', 'Scalable', 'Tested', 'Production-Ready', 'Built To Last'], 3000);
+
+(function initWordHero(){
+  const el = document.getElementById('wordRotate');
+  const prevBtn = document.getElementById('wordPrev');
+  const nextBtn = document.getElementById('wordNext');
+  if (!el) return;
+
+  const words = ['Trust', 'Love', 'Rely On', 'Recommend', 'Remember'];
+  let idx = 0;
+  let timer;
+
+  function show(nextIdx){
+    idx = (nextIdx + words.length) % words.length;
+    el.classList.add('swap');
+    setTimeout(() => {
+      el.textContent = words[idx];
+      el.classList.remove('swap');
+    }, 260);
+  }
+
+  function startAuto(){
+    clearInterval(timer);
+    timer = setInterval(() => show(idx + 1), 3200);
+  }
+
+  prevBtn?.addEventListener('click', () => { show(idx - 1); startAuto(); });
+  nextBtn?.addEventListener('click', () => { show(idx + 1); startAuto(); });
+
+  startAuto();
+})();
+
 /* ============ MOBILE MENU ============ */
 const hamburger = document.getElementById('hamburger');
 const mobileMenu = document.getElementById('mobileMenu');
